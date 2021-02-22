@@ -1,0 +1,13 @@
+image: python:latest
+
+stages:
+  - get_most_profitable
+
+before_script:
+  - python --version
+  - pip install requests bs4
+
+get_most_profitable:
+  stage: get_most_profitable
+  script:
+    - python whattomine-notifs.py
